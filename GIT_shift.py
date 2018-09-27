@@ -3,12 +3,12 @@ from openpyxl.cell import get_column_letter
 
 # This class works with openpyxl to add/delete rows and columns in Excel
 # Openpyxl didn't have this feature to my knowledge, so I coded a way to do it
-class Shift():
-    def __init__(self, workbook, max_column, max_row, selected_row_col):
+class Shift:
+    def __init__(self, workbook, selected_row_col):
         self.workbook = workbook
-        self.column = max_column
-        self.row = max_row
         self.selected = selected_row_col
+        self.column = workbook.max_column
+        self.row = workbook.max_row
 
     def insert_row(self): # Inserts row
         k = self.row
