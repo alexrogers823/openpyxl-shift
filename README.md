@@ -26,7 +26,7 @@ import openpyxl
 from Shift.shift import Shift
 
 workbook = openpyxl.load_workbook("Hello_World.xlsx")
-worksheet = workbook.get_sheet_by_name("Python")
+worksheet = workbook["Python"]
 
 # Insert row at row 9 of worksheet
 row_nine = Shift(worksheet, 9)
@@ -40,7 +40,7 @@ import openpyxl
 from Shift.shift import Shift
 
 workbook = openpyxl.load_workbook("Hello_World.xlsx")
-worksheet = workbook.get_sheet_by_name("Python")
+worksheet = workbook[Python]
 
 # Delete column at column E (5th column) of worksheet
 column_E = Shift(worksheet, 5)
